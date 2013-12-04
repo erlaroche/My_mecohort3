@@ -5,7 +5,7 @@ class VideosController < ApplicationController
     @video = Video.find(id)
   end
 
-  def show_all
+  def index
     @videos = Video.all
   end
 
