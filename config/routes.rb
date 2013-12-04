@@ -12,4 +12,5 @@ MetubeCohort3::Application.routes.draw do
 
   patch '/videos/:id' => 'videos#update'
 
+  delete '/videos/:id' => 'videos#destroy'
 end

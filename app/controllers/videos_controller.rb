@@ -1,7 +1,8 @@
 class VideosController < ApplicationController
 
   def show
-    @video = Video.find(params[:id])
+    id = params[:id]
+    @video = Video.find(id)
   end
 
   def show_all
@@ -26,6 +27,12 @@ class VideosController < ApplicationController
     @video = Video.find(params[:id])
     @video.update(video_params)
     redirect_to root_path
+  end
+
+  def destroy
+  @video = Video.find(params[:id])
+  @video.destroy
+  redirect_to root_path
   end
 
   private
